@@ -495,8 +495,7 @@ nav {
 }
 
 .destination-meta p {
-  font-size: var(--fs-800);
-  font-family: var(--ff-serif);
+  white-space: nowrap;
 }
 
 /* =========================================
