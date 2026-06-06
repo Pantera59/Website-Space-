@@ -371,7 +371,7 @@ nav {
   margin: 0;
 }
 
-.dot-indicators a {
+.dot-indicators > * {
   cursor: pointer;
   display: block;
   width: 0.9375rem;
@@ -383,13 +383,12 @@ nav {
   transition: background-color 300ms ease;
 }
 
-.dot-indicators a:hover,
-.dot-indicators a:focus {
+.dot-indicators > *:hover,
+.dot-indicators > *:focus {
   background-color: hsla(0, 0%, 100%, 0.5);
 }
 
-.dot-indicators .active a,
-.dot-indicators a[aria-selected="true"] {
+.dot-indicators > *[aria-selected="true"] {
   background-color: var(--clr-white);
 }
 
@@ -474,15 +473,6 @@ nav {
 
 .grid-container--destination picture {
   max-width: 60%;
-}
-
-.grid-container--destination picture img {
-  animation: spin-slow 60s linear infinite;
-}
-
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
 }
 
 .destination-meta {
