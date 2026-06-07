@@ -26,9 +26,9 @@
     <nav>
       <ul id="primary-navigation" class="primary-navigation" data-visible="false">
         <li><a href="index.html"><span aria-hidden="true">00</span> Home</a></li>
-        <li><a href="destination-moon.html"><span aria-hidden="true">01</span> Destination</a></li>
+        <li><a href="destination.html"><span aria-hidden="true">01</span> Destination</a></li>
         <li class="active"><a href="crew.html" aria-current="page"><span aria-hidden="true">02</span> Crew</a></li>
-        <li><a href="technology-vehicle.html"><span aria-hidden="true">03</span> Technology</a></li>
+        <li><a href="technology.html"><span aria-hidden="true">03</span> Technology</a></li>
       </ul>
     </nav>
   </header>
@@ -44,28 +44,20 @@
       <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" id="crew-image" />
     </picture>
 
-    <ul class="dot-indicators" role="tablist" aria-label="crew members">
-      <li role="presentation">
-        <button role="tab" aria-selected="true" data-index="0">
-          <span class="sr-only">Douglas Hurley</span>
-        </button>
-      </li>
-      <li role="presentation">
-        <button role="tab" aria-selected="false" data-index="1">
-          <span class="sr-only">Mark Shuttleworth</span>
-        </button>
-      </li>
-      <li role="presentation">
-        <button role="tab" aria-selected="false" data-index="2">
-          <span class="sr-only">Victor Glover</span>
-        </button>
-      </li>
-      <li role="presentation">
-        <button role="tab" aria-selected="false" data-index="3">
-          <span class="sr-only">Anousheh Ansari</span>
-        </button>
-      </li>
-    </ul>
+    <div class="dot-indicators" role="tablist" aria-label="crew members">
+      <button role="tab" aria-selected="true" data-index="0">
+        <span class="sr-only">Douglas Hurley</span>
+      </button>
+      <button role="tab" aria-selected="false" data-index="1">
+        <span class="sr-only">Mark Shuttleworth</span>
+      </button>
+      <button role="tab" aria-selected="false" data-index="2">
+        <span class="sr-only">Victor Glover</span>
+      </button>
+      <button role="tab" aria-selected="false" data-index="3">
+        <span class="sr-only">Anousheh Ansari</span>
+      </button>
+    </div>
 
     <article class="crew-details">
       <h2 id="crew-role" class="fs-600 ff-serif uppercase text-accent">Commander</h2>

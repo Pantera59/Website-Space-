@@ -168,7 +168,6 @@ select {
 
 .d-block { display: block; }
 
-/* Visually hidden pero accesible */
 .sr-only {
   position: absolute;
   width: 1px;
@@ -187,7 +186,6 @@ select {
   max-width: 80rem;
 }
 
-/* Grid de contenido centrado para cada página */
 .grid-container {
   display: grid;
   text-align: center;
@@ -219,7 +217,6 @@ select {
   padding: 1.5rem clamp(1.5rem, 5vw, 3.5rem);
 }
 
-/* Línea decorativa que cruza el header (solo desktop) */
 .primary-header::after {
   content: '';
   display: block;
@@ -337,7 +334,7 @@ nav {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.25);
 }
 
-.tab-list a {
+.tab-list button {
   display: inline-block;
   cursor: pointer;
   text-decoration: none;
@@ -349,15 +346,18 @@ nav {
   text-transform: uppercase;
   color: var(--clr-light);
   background: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   transition: border-color 300ms ease;
 }
 
-.tab-list a:hover {
+.tab-list button:hover {
   border-bottom-color: hsla(0, 0%, 100%, 0.5);
 }
 
-.tab-list .active a,
-.tab-list a[aria-selected="true"] {
+.tab-list .active button,
+.tab-list button[aria-selected="true"] {
   color: var(--clr-white);
   border-bottom-color: var(--clr-white);
 }
@@ -380,6 +380,7 @@ nav {
   background-color: hsla(0, 0%, 100%, 0.17);
   text-decoration: none;
   border: 0;
+  padding: 0; /* Aquí está el ajuste que necesitábamos */
   transition: background-color 300ms ease;
 }
 
@@ -402,7 +403,7 @@ nav {
   margin: 0;
 }
 
-.number-indicators a {
+.number-indicators button {
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -419,13 +420,13 @@ nav {
   transition: border-color 300ms ease, background-color 300ms ease;
 }
 
-.number-indicators a:hover,
-.number-indicators a:focus {
+.number-indicators button:hover,
+.number-indicators button:focus {
   border-color: var(--clr-white);
 }
 
-.number-indicators .active a,
-.number-indicators a[aria-selected="true"] {
+.number-indicators .active,
+.number-indicators button[aria-selected="true"] {
   background-color: var(--clr-white);
   color: var(--clr-dark);
 }
@@ -496,6 +497,7 @@ nav {
   background-image: url('../assets/crew/background-crew-mobile.jpg');
   background-size: cover;
   background-position: bottom center;
+  overflow: hidden;
 }
 
 .grid-container--crew {
@@ -512,10 +514,10 @@ nav {
 .grid-container--crew > .dot-indicators { grid-area: dots; }
 .grid-container--crew > .crew-details   { grid-area: content; }
 
-.grid-container--crew picture {
-  max-width: 60%;
-  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
-}
+.grid-container--crew picture img {
+    max-height: 75vh; /* La imagen nunca será más alta que el 75% de la pantalla */
+    object-fit: contain;
+  }
 
 .crew-details h2 {
   color: hsla(0, 0%, 100%, 0.5);
@@ -642,7 +644,6 @@ nav {
     margin-top: 1.5rem;
   }
 
-  /* Navigation: ocultar números en tablet, mostrar en desktop */
   .primary-navigation a span { display: inline; }
 
   /* Home */
@@ -725,7 +726,6 @@ nav {
     object-position: left center;
   }
 
-  /* Mobile nav toggle: nunca visible en desktop */
   .mobile-nav-toggle { display: none; }
 }
 
